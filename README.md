@@ -27,7 +27,7 @@ storage:
       mode: 0600
       contents:
         inline: |
-          K3S_URL=https://[SERVER-IP]:[PORT]
+          K3S_URL=https://[SERVER_IP]:6443
           K3S_TOKEN=[YOUR_NODE_TOKEN]
 ```
 
