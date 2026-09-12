@@ -11,7 +11,25 @@ A lot of the initial work for this is inspired by [guiso](https://github.com/est
 - [ ] Basic functionality
 - [ ] Better integration with ucore features?
 - [ ] Automatic worker joining over PXE
+- [ ] (Very far away) Installation ISO
 
+## Agent Configuration
+
+Agent joining is handled via environmental variables in `/etc/rancher/k3s/k3s.env`. You can set this through your Butane file as follows:
+
+```butane
+variant: fcos
+version: 1.6.0
+
+storage:
+  files:
+    - path: /etc/rancher/k3s/k3s.env
+      mode: 0600
+      contents:
+        inline: |
+          K3S_URL=https://SERVER-IP:6443
+          K3S_TOKEN=YOUR_NODE_TOKEN
+```
 
 ## Installation
 
