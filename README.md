@@ -12,6 +12,14 @@ A lot of the initial work for this is inspired by [guiso](https://github.com/est
 - [ ] Better integration with ucore features?
 - [ ] Automatic worker joining over PXE
 - [ ] (Very far away) Site to auto-generate installation files.
+- [ ] HA etcd support
+- [ ] Better Nvidia support
+
+## Nvidia Support
+
+Currently, both the main and sub images ship an nvidia-device-plugin manifest. Although this will automatically deploy the manifest on the main image, this does not occur for sub (which runs in agent mode). This is an oversight and will require refactoring to fix.
+
+If you have a server node without an Nvidia card but an agent node with an Nvidia card, you will need to manually deploy the nvidia-device-plugin from the server.
 
 ## Agent Configuration
 
