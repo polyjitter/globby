@@ -1,8 +1,17 @@
 # globby &nbsp; [![bluebuild build badge](https://github.com/polyjitter/globby/actions/workflows/build.yml/badge.svg)](https://github.com/polyjitter/globby/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+**Globby** is a custom [ucore](https://projectucore.org/) image which automatically builds in [k3s](https://k3s.io/) with a [Headlamp](https://headlamp.dev/) dashboard for running home Kubernetes clusters. 
 
-After setup, it is recommended you update this README to describe your custom image.
+It is named Globby because I am bad at naming things. It is stupidly work in progress! 
+
+A lot of the initial work for this is inspired by [guiso](https://github.com/esteganobvio/guiso). 
+
+## Roadmap
+
+- [ ] Basic functionality
+- [ ] Better integration with ucore features?
+- [ ] Automatic worker joining over PXE
+
 
 ## Installation
 
