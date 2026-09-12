@@ -1,6 +1,6 @@
 [Unit]
 Description=Stage nvidia config
-Before=k3s.service
+Before=k3s-agent.service k3s-server.service
 ConditionPathExists=!/var/lib/rancher/k3s/.nvidia-staged
 
 [Service]

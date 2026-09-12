@@ -1,8 +1,8 @@
 [Unit]
-Description=k3s server
-After=stage-k3s.service network-online.target
+Description=k3s agent
+After=stage-k3s.service stage-nvidia.service network-online.target
 Wants=network-online.target
-Requires=k3s-stage-setup.service
+Requires=stage-k3s.service
 
 [Service]
 Type=notify
