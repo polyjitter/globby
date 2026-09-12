@@ -36,22 +36,30 @@ storage:
 > [!WARNING]  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
+### Auto Rebase
+
+You can auto-rebase with Butane; an example is provided in the `examples` directory.
+
+### Manual Rebase
+
 To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polyjitter/globby:latest
+  ```sh
+  # Or any variant
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polyjitter/globby-main:latest
   ```
 - Reboot to complete the rebase:
-  ```
+  ```sh
   systemctl reboot
   ```
 - Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polyjitter/globby:latest
+  ```sh
+  # Or any variant
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polyjitter/globby-main:latest
   ```
 - Reboot again to complete the installation
-  ```
+  ```sh
   systemctl reboot
   ```
 
