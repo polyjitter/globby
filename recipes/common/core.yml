@@ -1,0 +1,27 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: dnf
+    install:
+      packages:
+        - container-selinux
+        - selinux-policy-base
+    remove:
+      packages:
+        - moby-engine # hello i do not need 
+
+  - type: script
+    scripts:
+      - k3s.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - stage-k3s.service
+        - k3s.service

@@ -1,0 +1,12 @@
+[Unit]
+Description=Stage nvidia config
+Before=k3s.service
+ConditionPathExists=!/var/lib/rancher/k3s/.nvidia-staged
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/k3s-setup/stage-nvidia-setup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

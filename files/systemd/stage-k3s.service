@@ -1,0 +1,12 @@
+[Unit]
+Description=Stage k3s containerd and auto-deploy manifests
+Before=k3s.service
+ConditionPathExists=!/var/lib/rancher/k3s/.staged
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/k3s-setup/stage-k3s-setup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
