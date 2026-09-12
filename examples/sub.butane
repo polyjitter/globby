@@ -13,6 +13,14 @@ storage:
     - path: /etc/ucore-autorebase
       mode: 0754
 
+  files:
+    - path: /etc/rancher/k3s/k3s.env
+      mode: 0600
+      contents:
+        inline: |
+          K3S_URL=https://YOUR_SERVER_IP_HERE:6443
+          K3S_TOKEN=YOUR_NODE_TOKEN_HERE
+
 systemd:
   units:
     - name: globby-unsigned-autorebase.service
@@ -51,3 +59,5 @@ systemd:
         ExecStart=/usr/bin/systemctl reboot
         [Install]
         WantedBy=multi-user.target
+
+        

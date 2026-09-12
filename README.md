@@ -15,7 +15,7 @@ A lot of the initial work for this is inspired by [guiso](https://github.com/est
 
 ## Agent Configuration
 
-Agent joining is handled via environmental variables in `/etc/rancher/k3s/k3s.env`. You can set this through your Butane file as follows:
+Agent joining is handled via environmental variables in `/etc/rancher/k3s/k3s.env`. You can set this through your Butane file as follows (which can also be seen in `sub.butane` in the `examples` directory):
 
 ```butane
 variant: fcos
@@ -27,8 +27,8 @@ storage:
       mode: 0600
       contents:
         inline: |
-          K3S_URL=https://[SERVER_IP]:6443
-          K3S_TOKEN=[YOUR_NODE_TOKEN]
+          K3S_URL=https://YOUR_SERVER_IP_HERE:6443
+          K3S_TOKEN=YOUR_NODE_TOKEN_HERE
 ```
 
 ## Installation
