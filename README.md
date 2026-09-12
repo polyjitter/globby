@@ -17,7 +17,7 @@ A lot of the initial work for this is inspired by [guiso](https://github.com/est
 
 Agent joining is handled via environmental variables in `/etc/rancher/k3s/k3s.env`. You can set this through your Butane file as follows (which can also be seen in `sub.butane` in the `examples` directory):
 
-```butane
+```yaml
 variant: fcos
 version: 1.6.0
 
