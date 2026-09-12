@@ -11,7 +11,7 @@ A lot of the initial work for this is inspired by [guiso](https://github.com/est
 - [ ] Basic functionality
 - [ ] Better integration with ucore features?
 - [ ] Automatic worker joining over PXE
-- [ ] (Very far away) Installation ISO
+- [ ] (Very far away) Site to auto-generate installation files.
 
 ## Agent Configuration
 
