@@ -13,6 +13,7 @@ image-version: stable-nvidia # You can pin to a specific version of Fedora as we
 # you can include multiple instances of the same module
 modules:
   - from-file: common/core.yml
+  - from-file: common/main.yml
   - from-file: common/headlamp.yml
   - from-file: common/nvidia.yml
 

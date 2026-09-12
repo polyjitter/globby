@@ -24,4 +24,3 @@ modules:
     system:
       enabled:
         - stage-k3s.service
-        - k3s.service

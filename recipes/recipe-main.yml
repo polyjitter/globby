@@ -13,6 +13,7 @@ image-version: stable # You can pin to a specific version of Fedora as well
 # you can include multiple instances of the same module
 modules:
   - from-file: common/core.yml
+  - from-file: common/main.yml
   - from-file: common/headlamp.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
