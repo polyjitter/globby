@@ -1,6 +1,6 @@
 [Unit]
 Description=k3s server
-After=k3s-stage-setup.service network-online.target
+After=stage-k3s.service network-online.target
 Wants=network-online.target
 Requires=k3s-stage-setup.service
 
